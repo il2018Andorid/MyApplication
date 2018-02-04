@@ -1,6 +1,7 @@
 package demo.batcha.com.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText et_email,et_pwd,et_mobno,et_cnf_pwd;
     Button btn_login,btn_signup;
+    SharedPreferences sharepref;
 
     String str_email,str_password,str_monbo,str_cnf_pwd;
 
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        sharepref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
 
 
         et_email = (EditText)this.findViewById(R.id.et_email);
@@ -75,7 +80,10 @@ public class MainActivity extends AppCompatActivity {
                 }else if(!et_cnf_pwd.getText().toString().equals(et_pwd.getText().toString())){
                     et_pwd.setError("password not matched..");
                 }else{
+                    //APi response Suceess
                     startActivity(new Intent(MainActivity.this,Second.class));
+                    sharepref.edit().putString("key_login","yes").apply();
+
                 }
 
 
