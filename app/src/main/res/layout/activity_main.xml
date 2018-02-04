@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="demo.batcha.com.myapplication.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="50dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:id="@+id/et_email"
+        android:background="@android:drawable/edit_text"
+        android:hint="Enter Email Address"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/et_mobile"
+        android:background="@android:drawable/edit_text"
+        android:hint="Enter Email Address"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/et_pwd"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter Password"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/et_cnf_pwd"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter Password"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Login"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Sign Up"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
