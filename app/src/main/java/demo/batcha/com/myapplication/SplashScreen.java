@@ -5,9 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Space;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -15,8 +13,6 @@ public class SplashScreen extends AppCompatActivity {
     final int SPLASH_TIME_OUT = 3500;
     SharedPreferences sharepref;
     ImageView imgLogo1,imgLogo2;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,22 +40,19 @@ public class SplashScreen extends AppCompatActivity {
 
                 if(sharepref.getString("key_login", "no").equalsIgnoreCase("Yes")){
 
-                    startActivity(new Intent(SplashScreen.this,MainActivity.class));
+                    startActivity(new Intent(SplashScreen.this,Signup.class));
               /*      overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);*/
                     finish();
 
                 }else{
 
-                    startActivity(new Intent(SplashScreen.this, Second.class));
+                    startActivity(new Intent(SplashScreen.this, Login.class));
 /*
                     overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 */
                     finish();
 
                 }
-
-
-
             }
         }, SPLASH_TIME_OUT);
 

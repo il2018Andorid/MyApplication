@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="demo.batcha.com.myapplication.MainActivity">
+    tools:context="demo.batcha.com.myapplication.Signup">
 
     <ImageView
         android:layout_width="match_parent"
@@ -29,11 +29,54 @@
         android:inputType="number"
         android:id="@+id/et_mobile"
         android:background="@android:drawable/edit_text"
-        android:hint="Enter Email Address"
+        android:hint="Enter Mobile No"
         android:layout_margin="10dp"
         android:padding="10dp"/>
 
 
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="58dp"
+        android:orientation="horizontal"
+        android:id="@+id/rg_gender">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:text="Gender"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="21sp"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Male"
+            android:id="@+id/radioButton"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Female"
+            android:id="@+id/radioButton2"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textSize="25sp"/>
+    </RadioGroup>
+
+    <!-- Spinner Element -->
+    <Spinner
+        android:id="@+id/sp_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
     <EditText
@@ -62,15 +105,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="Login"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btn_signup"
