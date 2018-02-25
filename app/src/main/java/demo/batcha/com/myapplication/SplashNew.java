@@ -5,19 +5,16 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageView;
 
-public class SplashScreen extends AppCompatActivity {
+public class SplashNew extends AppCompatActivity {
 
 
     final int SPLASH_TIME_OUT = 3500;
     SharedPreferences sharepref;
-    ImageView imgLogo1,imgLogo2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_splash_new);
 
         sharepref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
 
@@ -28,11 +25,11 @@ public class SplashScreen extends AppCompatActivity {
 
                 if(sharepref.getString("key_login", "no").equalsIgnoreCase("Yes")){
 
-                    startActivity(new Intent(SplashScreen.this,Signup.class));
+                    startActivity(new Intent(SplashNew.this,Signup.class));
                     finish();
 
                 }else{
-                    startActivity(new Intent(SplashScreen.this, Login.class));
+                    startActivity(new Intent(SplashNew.this, Login.class));
                     finish();
                 }
             }

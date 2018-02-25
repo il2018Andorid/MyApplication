@@ -103,7 +103,7 @@ public class Const {
 	/*** BACKEND VARIABLES */
 
 	public static String SERVER_URL_ONLY ="http://13.56.92.252/"; //"http://54.153.127.215/api/";
-	public static String SERVER_URL_API ="http://13.56.92.252/api/"; //"http://54.153.127.215/api/";
+	public static String SERVER_URL_API ="https://clist.by:443/api/v1/json/"; //"http://54.153.127.215/api/";
 	public static String WEBSITE_PIC_URL = "https://www.ovenues.com/";// assets/images/";
 
 

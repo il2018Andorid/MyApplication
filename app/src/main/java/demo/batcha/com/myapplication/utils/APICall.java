@@ -1,6 +1,8 @@
 package demo.batcha.com.myapplication.utils;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.StrictMode;
 
 import java.io.File;
@@ -24,6 +26,7 @@ public class APICall {
 
     static OkHttpClient client = new OkHttpClient();
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     public static String post(String url, String json, String method) throws IOException {
 
         client.connectTimeoutMillis();
