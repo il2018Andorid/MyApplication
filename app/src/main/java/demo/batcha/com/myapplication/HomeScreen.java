@@ -50,7 +50,7 @@ public class HomeScreen extends AppCompatActivity {
         adapter = new Recycler_View_Adapter(data, getApplication());
 
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(HomeScreen.this));
 
         RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
         itemAnimator.setAddDuration(1000);

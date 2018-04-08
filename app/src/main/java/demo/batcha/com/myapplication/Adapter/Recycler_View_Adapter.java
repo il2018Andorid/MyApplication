@@ -18,6 +18,7 @@ import demo.batcha.com.myapplication.R;
 /**
  * Created by vimoxpc on 25-Feb-18.
  */
+
 public class Recycler_View_Adapter extends RecyclerView.Adapter<Recycler_View_Adapter.View_Holder> {
 
     List<DataRecycler> list = Collections.emptyList();
@@ -53,24 +54,6 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<Recycler_View_Ad
     public int getItemCount() {
         //returns the number of elements the RecyclerView will display
         return list.size();
-    }
-
-    @Override
-    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        super.onAttachedToRecyclerView(recyclerView);
-    }
-
-    // Insert a new item to the RecyclerView on a predefined position
-    public void insert(int position, DataRecycler data) {
-        list.add(position, data);
-        notifyItemInserted(position);
-    }
-
-    // Remove a RecyclerView item containing a specified DataRecycler object
-    public void remove(DataRecycler data) {
-        int position = list.indexOf(data);
-        list.remove(position);
-        notifyItemRemoved(position);
     }
 
     public class View_Holder extends RecyclerView.ViewHolder {
